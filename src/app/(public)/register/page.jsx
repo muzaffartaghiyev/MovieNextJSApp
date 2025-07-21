@@ -6,7 +6,7 @@ import React, { useContext, useState } from 'react'
 
 const Register = () => {
 
-    const {createUser} = useAuthContext()
+    const {createUser,signUpProvider} = useAuthContext()
 
     const [signup,setSignup] = useState(
         {
@@ -87,7 +87,7 @@ const Register = () => {
               <button
                 className="flex justify-between text-center items-center btn-danger"
                 type="button"
-             
+                onClick={signUpProvider}
               >
                 Continue with Google
               </button>

@@ -32,3 +32,11 @@ export const getMovieDetails = async(movieId)=>{
 
     return data
 }
+
+export const getYoutubeKey = async(movieId)=>{
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`)
+
+    const {results} = await res.json()
+    
+    return results[0].key
+}

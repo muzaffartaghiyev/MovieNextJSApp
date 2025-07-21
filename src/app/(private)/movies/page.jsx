@@ -10,7 +10,7 @@ const Movies = async() => {
   
   return (
     <div>
-      <HeroSection movies={movies[0]}/>
+      <HeroSection movie={movies[0]}/>
       <MovieSection type="now_playing"/>
       <MovieSection type="popular"/>
       <MovieSection type="top_rated"/>

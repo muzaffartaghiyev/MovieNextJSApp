@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { getMovies } from '@/helpers/movieFunction'
 import MovieCard from './MovieCard'
