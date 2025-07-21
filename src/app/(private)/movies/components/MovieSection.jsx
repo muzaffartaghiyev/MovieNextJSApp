@@ -1,5 +1,6 @@
 import React from 'react'
 import { getMovies } from '@/helpers/movieFunction'
+import MovieCard from './MovieCard'
 
 const MovieSection = async({type}) => {
   const movies = await getMovies(type)
@@ -13,7 +14,7 @@ const MovieSection = async({type}) => {
 
       <div className="grid grid-flow-col gap-2 overflow-scroll">
         {movies.map((movie)=>(
-          <h2>{movie.title}</h2>
+          <MovieCard key={movie.id} {...movie}/>
         ))}
       </div>
     </div>

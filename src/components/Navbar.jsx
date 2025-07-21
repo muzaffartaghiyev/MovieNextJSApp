@@ -80,23 +80,30 @@ const Navbar = () => {
                     </MenuItem>
                   )}
                     
+                    {currentUser && 
+                      (
+                      <MenuItem>
+                        <Link
+                          href="/profile"
+                          className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
+                        >
+                          Profile
+                        </Link>
+                      </MenuItem>
+                    )
+                    }
+                    {currentUser && 
+                    (
+                      <MenuItem>
+                        <span
+                          className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 cursor-pointer"
+                          onClick={logOut}
+                        >
+                          Logout
+                        </span>
+                      </MenuItem>
+                    )}
                     
-                    <MenuItem>
-                      <Link
-                        href="/profile"
-                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                      >
-                        Profile
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <span
-                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 cursor-pointer"
-                        onClick={logOut}
-                      >
-                        Logout
-                      </span>
-                    </MenuItem>
                   </MenuItems>
                 </Transition>
               </Menu>
